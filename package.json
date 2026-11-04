@@ -1,0 +1,16 @@
+{
+  "name": "hamster-friendship",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Hamster Friendship: a static browser game with optional wallet sign-in and a Supabase Top 100 leaderboard.",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "preview": "node scripts/preview.mjs",
+    "typecheck": "npx --yes -p typescript@5.9.3 tsc -p tsconfig.json",
+    "test": "node --test tests/"
+  }
+}

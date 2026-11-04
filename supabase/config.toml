@@ -1,0 +1,21 @@
+# Supabase CLI configuration for Hamster Friendship. Only the settings this project relies on;
+# everything else keeps the CLI's defaults. `supabase link --project-ref <ref>` connects it to
+# your hosted project.
+project_id = "hamster-friendship"
+
+# The functions do their own authentication (wallet signature + session token), and the browser
+# may call them with a publishable key that is not a JWT, so the gateway's JWT check is off.
+[functions.auth-nonce]
+verify_jwt = false
+
+[functions.auth-verify]
+verify_jwt = false
+
+[functions.auth-signout]
+verify_jwt = false
+
+[functions.run-start]
+verify_jwt = false
+
+[functions.score-submit]
+verify_jwt = false

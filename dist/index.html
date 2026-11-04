@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hamster Friendship</title>
+    <meta name="description" content="A tiny browser game: guide your hamster, catch sunflower seeds, make friends and climb the Top 100 with your wallet." />
+    <meta name="theme-color" content="#FFF8EE" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Hamster Friendship" />
+    <meta property="og:description" content="Guide your hamster, catch sunflower seeds, make friends and climb the Top 100." />
+    <meta property="og:image" content="./og-image.svg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./config.js"></script>
+    <script type="module" src="./js/app.js"></script>
+  </head>
+  <body>
+    <a class="skip" href="#play">Skip to the game</a>
+    <header class="top">
+      <div class="top-inner">
+        <a class="brand" href="./" aria-label="Hamster Friendship home">
+          <img src="./favicon.svg" width="32" height="32" alt="" />
+          <span>Hamster Friendship</span>
+        </a>
+        <button id="connect" class="btn btn-secondary" type="button" aria-haspopup="dialog">Connect wallet</button>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="intro" aria-labelledby="title">
+        <h1 id="title">Catch seeds, make friends</h1>
+        <p class="lede">A tiny hamster arcade game. Play as a guest, or connect a wallet to rank on the Top 100.</p>
+      </section>
+
+      <div class="layout">
+        <section id="play" class="card game-card" aria-labelledby="play-title" tabindex="-1">
+          <h2 id="play-title" class="sr-only">Game</h2>
+          <dl class="hud">
+            <div><dt>Score</dt><dd id="hud-score">0</dd></div>
+            <div><dt>Best</dt><dd id="hud-best">0</dd></div>
+            <div><dt>Friends</dt><dd id="hud-friends">0</dd></div>
+            <div><dt>Lives</dt><dd id="hud-lives">3</dd></div>
+          </dl>
+
+          <div class="stage">
+            <canvas id="field" width="480" height="360" role="img" aria-label="Game field: your hamster, falling seeds, hearts and burrs"></canvas>
+            <div id="overlay" class="overlay">
+              <div class="overlay-box">
+                <p id="overlay-title" class="overlay-title">Ready to play?</p>
+                <p id="overlay-text" class="overlay-text">Seeds are 1 point, hearts make a friend for 5. Dodge the burrs.</p>
+                <button id="play-btn" class="btn btn-primary" type="button">Play</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="controls">
+            <button id="left" class="btn btn-icon" type="button" aria-label="Move left">
+              <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M12.5 4.5 7 10l5.5 5.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <p class="hint">Hold the arrows, use arrow keys, or drag the field. P pauses.</p>
+            <button id="right" class="btn btn-icon" type="button" aria-label="Move right">
+              <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M7.5 4.5 13 10l-5.5 5.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
+          <p id="mode-note" class="mode-note">Playing as guest. Guest scores stay on this device.</p>
+          <p id="game-status" class="sr-only" role="status"></p>
+        </section>
+
+        <section class="card board" aria-labelledby="board-title">
+          <div class="board-head">
+            <h2 id="board-title">Top 100</h2>
+            <button id="refresh" class="btn btn-ghost" type="button">Refresh</button>
+          </div>
+          <p class="board-sub">Best score per wallet. Guest scores are not ranked.</p>
+          <div id="you" class="you" hidden></div>
+          <div id="board-state" class="board-state" role="status"></div>
+          <div class="table-wrap">
+            <table id="board-table" hidden>
+              <thead><tr><th scope="col">Rank</th><th scope="col">Player</th><th scope="col" class="num">Best</th></tr></thead>
+              <tbody id="board-body"></tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="foot">
+      <p>Wallet sign-in costs nothing: you sign a message, never a transaction. Scores are checked by the server before they rank.</p>
+    </footer>
+
+    <dialog id="sheet" class="sheet" aria-labelledby="sheet-title">
+      <div class="sheet-inner">
+        <div class="sheet-head">
+          <h2 id="sheet-title">Connect a wallet</h2>
+          <button id="sheet-close" class="btn btn-x" type="button" aria-label="Close">
+            <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </button>
+        </div>
+        <p id="sheet-intro" class="sheet-intro">Connecting is optional. You sign one free message so your best score counts on the Top 100.</p>
+        <div id="sheet-body" class="sheet-body"></div>
+        <p id="sheet-note" class="sheet-note" role="status"></p>
+      </div>
+    </dialog>
+  </body>
+</html>

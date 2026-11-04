@@ -1,0 +1,12 @@
+# Generated dependency and cache directories, at every level. dist/ is committed on purpose.
+node_modules/
+.npm/
+.cache/
+supabase/.temp/
+supabase/.branches/
+test/scratch/
+*.tgz
+*.log
+.env
+.env.*
+!.env.example

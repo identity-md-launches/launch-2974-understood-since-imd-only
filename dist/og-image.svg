@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#fff8ee"/>
+  <rect y="500" width="1200" height="130" fill="#9cc278"/>
+  <rect y="500" width="1200" height="10" fill="#86ad62"/>
+  <g transform="translate(860 330)">
+    <circle cx="-60" cy="-120" r="34" fill="#e8a15a"/>
+    <circle cx="60" cy="-120" r="34" fill="#e8a15a"/>
+    <circle cx="-60" cy="-120" r="17" fill="#f2a7a0"/>
+    <circle cx="60" cy="-120" r="17" fill="#f2a7a0"/>
+    <ellipse cx="0" cy="0" rx="150" ry="140" fill="#e8a15a"/>
+    <ellipse cx="0" cy="50" rx="88" ry="78" fill="#fff6e6"/>
+    <circle cx="-52" cy="-30" r="16" fill="#2b1a0e"/>
+    <circle cx="52" cy="-30" r="16" fill="#2b1a0e"/>
+    <circle cx="-90" cy="10" r="20" fill="#f5b3a6"/>
+    <circle cx="90" cy="10" r="20" fill="#f5b3a6"/>
+    <ellipse cx="0" cy="0" rx="14" ry="10" fill="#d9707a"/>
+  </g>
+  <path d="M600 140c-30-24-58 6-40 30l40 40 40-40c18-24-10-54-40-30z" fill="#e0577a"/>
+  <ellipse cx="560" cy="300" rx="14" ry="26" fill="#3f3a36"/>
+  <ellipse cx="660" cy="420" rx="14" ry="26" fill="#3f3a36"/>
+  <text x="80" y="250" font-family="ui-rounded, Nunito, Segoe UI, sans-serif" font-size="84" font-weight="800" fill="#3b2412">Hamster</text>
+  <text x="80" y="345" font-family="ui-rounded, Nunito, Segoe UI, sans-serif" font-size="84" font-weight="800" fill="#3b2412">Friendship</text>
+  <text x="80" y="415" font-family="ui-rounded, Nunito, Segoe UI, sans-serif" font-size="36" fill="#6b4a2e">Catch seeds, make friends, climb the Top 100.</text>
+</svg>
